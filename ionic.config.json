@@ -1,4 +1,10 @@
 {
   "name": "ucsal-app",
-  "type": "ionic1"
+  "type": "custom",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }

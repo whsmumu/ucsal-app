@@ -4,7 +4,8 @@
   "private": true,
   "description": "Portal do Aluno UCSal - MVP front-end com Ionic Framework + AngularJS",
   "scripts": {
-    "start": "ionic serve"
+    "start": "ionic serve",
+    "ionic:serve": "ionic-v1 serve"
   },
   "devDependencies": {
     "@ionic/cli": "^7.2.1",
