@@ -1,0 +1,64 @@
+<ion-view view-title="Mural">
+  <ion-content class="fundo">
+    <div class="pagina">
+
+      <!-- Destaque de boas-vindas -->
+      <div class="hero">
+        <div class="hero-aba">
+          <span class="marca-logo">U</span>
+          <span class="marca">ucsal</span>
+          <span class="hero-aba-sep">|</span>
+          <span class="hero-aba-label">MURAL</span>
+        </div>
+        <div class="hero-corpo">
+          <div class="hero-texto">
+            <h1 class="titulo-grande">
+              Olá, {{aluno.nome.split(' ')[0]}}
+              <span class="adesivo"><i class="icon ion-ios-bell-outline"></i> novidades</span>
+            </h1>
+            <p class="subtitulo">Notícias institucionais e eventos em que a UCSal está participando.</p>
+          </div>
+          <img class="hero-img" src="img/hero.svg" alt="">
+        </div>
+      </div>
+
+      <!-- Filtro por categoria -->
+      <div class="chips">
+        <button class="chip" ng-class="{ativo: categoria === ''}" ng-click="filtrar('')">
+          todos <span>{{noticias.length}}</span>
+        </button>
+        <button class="chip" ng-class="{ativo: categoria === 'Notícia'}" ng-click="filtrar('Notícia')">
+          notícias <span>{{(noticias | filter:{categoria: 'Notícia'}).length}}</span>
+        </button>
+        <button class="chip" ng-class="{ativo: categoria === 'Evento'}" ng-click="filtrar('Evento')">
+          eventos <span>{{(noticias | filter:{categoria: 'Evento'}).length}}</span>
+        </button>
+      </div>
+
+      <!-- Cards gerados pelo ng-repeat + filtro por categoria -->
+      <div class="grade-cards">
+        <div class="card card-noticia" ng-repeat="noticia in noticias | filter:{categoria: categoria}">
+          <div class="item item-image">
+            <img ng-src="{{noticia.imagem}}" alt="{{noticia.titulo}}">
+          </div>
+          <div class="item item-text-wrap">
+            <div class="card-meta">
+              <span class="etiqueta" ng-class="noticia.categoria === 'Evento' ? 'etiqueta-evento' : 'etiqueta-noticia'">
+                {{noticia.categoria}}
+              </span>
+              <span class="data"><i class="icon ion-ios-calendar-outline"></i> {{noticia.data | date:'dd/MM/yyyy'}}</span>
+            </div>
+            <h2>{{noticia.titulo}}</h2>
+            <p>{{noticia.resumo}}</p>
+          </div>
+          <div class="card-rodape">
+            <button class="button botao-secundario" ng-click="abrir(noticia)">
+              Ler mais <i class="icon ion-arrow-right-c"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

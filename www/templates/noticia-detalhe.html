@@ -1,0 +1,21 @@
+<ion-view view-title="{{noticia.categoria}}">
+  <ion-content class="fundo">
+    <div class="pagina pagina-estreita">
+      <div class="card card-detalhe">
+        <div class="item item-image">
+          <img ng-src="{{noticia.imagem}}" alt="{{noticia.titulo}}">
+        </div>
+        <div class="item item-text-wrap">
+          <div class="card-meta">
+            <span class="etiqueta" ng-class="noticia.categoria === 'Evento' ? 'etiqueta-evento' : 'etiqueta-noticia'">
+              {{noticia.categoria}}
+            </span>
+            <span class="data"><i class="icon ion-ios-calendar-outline"></i> {{noticia.data | date:'dd/MM/yyyy'}}</span>
+          </div>
+          <h1 class="titulo-medio">{{noticia.titulo}}</h1>
+          <p class="conteudo">{{noticia.conteudo}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300">
+  <defs>
+    <radialGradient id="brilho" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#9fd0f5" stop-opacity=".9"/><stop offset="1" stop-color="#9fd0f5" stop-opacity="0"/></radialGradient>
+    <linearGradient id="capelo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d4f91"/><stop offset="1" stop-color="#0a2a5c"/></linearGradient>
+  </defs>
+  <circle cx="160" cy="150" r="150" fill="url(#brilho)"/>
+  <path d="M90 150v50c0 30 140 30 140 0v-50" fill="#0f3570"/>
+  <path d="M160 70l120 50-120 50-120-50z" fill="url(#capelo)"/>
+  <path d="M160 70l120 50-120 50z" fill="#ffffff" opacity=".08"/>
+  <circle cx="160" cy="120" r="8" fill="#4aa3df"/>
+  <path d="M160 120l80 30v55" stroke="#4aa3df" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="240" cy="212" r="12" fill="#4aa3df"/>
+  <circle cx="140" cy="205" r="7" fill="#ffffff"/><circle cx="180" cy="205" r="7" fill="#ffffff"/>
+  <path d="M148 222q12 10 24 0" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
