@@ -1,0 +1,13 @@
+{
+  "name": "ucsal-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portal do Aluno UCSal - MVP front-end com Ionic Framework + AngularJS",
+  "scripts": {
+    "start": "ionic serve"
+  },
+  "devDependencies": {
+    "@ionic/cli": "^7.2.1",
+    "@ionic/v1-toolkit": "^3.2.20"
+  }
+}
