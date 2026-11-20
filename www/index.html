@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>Portal do Aluno UCSal</title>
+
+  <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Ionic bundle: ionic + angular + angular-ui-router -->
+  <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+  <!-- Formatação pt-BR para os filtros currency e date -->
+  <script src="lib/angular-i18n/angular-locale_pt-br.js"></script>
+
+  <!-- Módulo e rotas -->
+  <script src="js/app.js"></script>
+
+  <!-- Services (dados mockados) -->
+  <script src="js/services/AlunoService.js"></script>
+  <script src="js/services/AuthService.js"></script>
+  <script src="js/services/NoticiasService.js"></script>
+  <script src="js/services/FinanceiroService.js"></script>
+
+  <!-- Controllers -->
+  <script src="js/controllers/LoginCtrl.js"></script>
+  <script src="js/controllers/NoticiasCtrl.js"></script>
+  <script src="js/controllers/PerfilCtrl.js"></script>
+  <script src="js/controllers/FinanceiroCtrl.js"></script>
+</head>
+<body ng-app="ucsalApp">
+  <ion-nav-view></ion-nav-view>
+</body>
+</html>
