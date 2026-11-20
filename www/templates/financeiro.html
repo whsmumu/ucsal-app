@@ -1,0 +1,52 @@
+<ion-view view-title="Financeiro">
+  <ion-content class="fundo">
+    <div class="pagina pagina-estreita">
+
+      <div class="cabecalho">
+        <h1 class="titulo-grande">Financeiro <span class="adesivo">mensalidades</span></h1>
+        <p class="subtitulo">Escolha o semestre letivo para ver suas parcelas.</p>
+      </div>
+
+      <!-- Seletor de semestre -->
+      <div class="list lista-form">
+        <label class="item item-input item-select">
+          <div class="input-label">Semestre letivo</div>
+          <select ng-model="filtro.semestre"
+                  ng-options="semestre for semestre in semestres"
+                  ng-change="carregarMensalidades()"></select>
+        </label>
+      </div>
+
+      <!-- Lista de mensalidades do semestre escolhido -->
+      <div class="lista-mensalidades">
+        <div class="mensalidade" ng-repeat="mensalidade in mensalidades">
+          <div class="mensalidade-topo">
+            <div>
+              <h2>{{mensalidade.mes}}</h2>
+              <p>Vence em {{mensalidade.vencimento | date:'dd/MM/yyyy'}}</p>
+            </div>
+            <div class="mensalidade-direita">
+              <strong class="valor">{{mensalidade.valor | currency:'R$ '}}</strong>
+              <span class="status"
+                    ng-class="{'status-paga': mensalidade.status === 'Paga', 'status-apagar': mensalidade.status === 'A Pagar'}">
+                {{mensalidade.status}}
+              </span>
+            </div>
+          </div>
+
+          <!-- Só aparece para parcelas em aberto -->
+          <div class="boleto" ng-if="mensalidade.status === 'A Pagar'">
+            <code>{{mensalidade.codigoBarras}}</code>
+            <button class="button botao-secundario" ng-click="copiarCodigo(mensalidade)">
+              <i class="icon ion-ios-copy-outline"></i> Copiar Código de Barras
+            </button>
+            <div class="mensagem mensagem-sucesso" ng-show="copiado === mensalidade">
+              <i class="icon ion-checkmark-circled"></i> Código copiado para a área de transferência!
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>
