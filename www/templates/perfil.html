@@ -1,0 +1,66 @@
+<ion-view view-title="Meu cadastro">
+  <ion-content class="fundo">
+    <div class="pagina pagina-estreita">
+
+      <div class="cabecalho">
+        <h1 class="titulo-grande">Meu cadastro <span class="adesivo">atualização</span></h1>
+        <p class="subtitulo">Mantenha seus dados de contato e endereço em dia.</p>
+      </div>
+
+      <!-- Dados institucionais: somente leitura -->
+      <h3 class="secao">Dados institucionais</h3>
+      <div class="list lista-form">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Nome completo</span>
+          <input type="text" ng-model="aluno.nome" ng-disabled="true">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Matrícula</span>
+          <input type="text" ng-model="aluno.matricula" ng-disabled="true">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Curso</span>
+          <input type="text" ng-model="aluno.curso" ng-disabled="true">
+        </label>
+      </div>
+
+      <!-- Dados editáveis -->
+      <h3 class="secao">Contato</h3>
+      <div class="list lista-form">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">E-mail pessoal</span>
+          <input type="email" ng-model="aluno.email">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Telefone / WhatsApp</span>
+          <input type="tel" ng-model="aluno.telefone">
+        </label>
+      </div>
+
+      <h3 class="secao">Endereço</h3>
+      <div class="list lista-form">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">CEP</span>
+          <input type="text" ng-model="aluno.endereco.cep">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Rua</span>
+          <input type="text" ng-model="aluno.endereco.rua">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Bairro</span>
+          <input type="text" ng-model="aluno.endereco.bairro">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Cidade</span>
+          <input type="text" ng-model="aluno.endereco.cidade">
+        </label>
+      </div>
+
+      <button class="button button-block botao-primario botao-grande" ng-click="salvar()">
+        <i class="icon ion-checkmark"></i> Salvar Alterações
+      </button>
+
+    </div>
+  </ion-content>
+</ion-view>
