@@ -1,47 +1,58 @@
 <ion-view view-title="Login" hide-nav-bar="true">
   <ion-content class="fundo">
     <div class="pagina pagina-login">
+      <div class="login-grade">
 
-      <div class="hero">
-        <div class="hero-aba">
-          <span class="marca-logo">U</span>
-          <span class="marca">ucsal</span>
-          <span class="hero-aba-sep">|</span>
-          <span class="hero-aba-label">PORTAL DO ALUNO</span>
-        </div>
-
-        <div class="hero-corpo">
-          <div class="hero-texto">
-            <h1 class="titulo-grande">
-              Sua vida acadêmica em um só lugar
-              <span class="adesivo"><i class="icon ion-ios-calendar-outline"></i> 2026.2</span>
-            </h1>
-            <p class="subtitulo">Mensalidades, cadastro e eventos dos campi Pituaçu e Federação.</p>
-
-            <div class="list lista-form">
-              <label class="item item-input item-stacked-label">
-                <span class="input-label">Matrícula</span>
-                <input type="text" ng-model="form.matricula" placeholder="Ex.: 20261001">
-              </label>
-              <label class="item item-input item-stacked-label">
-                <span class="input-label">Senha</span>
-                <input type="password" ng-model="form.senha" placeholder="Sua senha">
-              </label>
-            </div>
-
-            <div class="mensagem mensagem-erro" ng-show="erro">
-              <i class="icon ion-alert-circled"></i> {{erro}}
-            </div>
-
-            <button class="button botao-primario botao-grande" ng-click="entrar()">
-              Entrar <i class="icon ion-arrow-right-c"></i>
-            </button>
+        <!-- Lado esquerdo: imagem com texto de apresentação -->
+        <div class="login-banner">
+          <div class="hero-aba">
+            <span class="marca-logo">U</span>
+            <span class="marca">ucsal</span>
+            <span class="hero-aba-sep">|</span>
+            <span class="hero-aba-label">PORTAL DO ALUNO</span>
           </div>
 
-          <img class="hero-img" src="img/hero.svg" alt="Ilustração de capelo de formatura">
-        </div>
-      </div>
+          <h1 class="titulo-grande">
+            Portal do Aluno
+            <span class="adesivo"><i class="icon ion-ios-calendar-outline"></i> 2026.2</span>
+          </h1>
+          <p class="subtitulo">Sua vida acadêmica em um só lugar: mensalidades, cadastro e eventos dos campi Pituaçu e Federação.</p>
 
+          <img class="login-img" src="img/hero.svg" alt="Ilustração de capelo de formatura">
+
+          <div class="login-recursos">
+            <span><i class="icon ion-ios-paper-outline"></i> Mural</span>
+            <span><i class="icon ion-ios-person-outline"></i> Cadastro</span>
+            <span><i class="icon ion-card"></i> Financeiro</span>
+          </div>
+        </div>
+
+        <!-- Lado direito: formulário de login -->
+        <div class="login-form">
+          <h2 class="titulo-medio">Entrar</h2>
+          <p class="subtitulo">Use sua matrícula e senha.</p>
+
+          <div class="list lista-form">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Matrícula</span>
+              <input type="text" ng-model="form.matricula" placeholder="Ex.: 20261001">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Senha</span>
+              <input type="password" ng-model="form.senha" placeholder="Sua senha">
+            </label>
+          </div>
+
+          <div class="mensagem mensagem-erro" ng-show="erro">
+            <i class="icon ion-alert-circled"></i> {{erro}}
+          </div>
+
+          <button class="button button-block botao-primario botao-grande" ng-click="entrar()">
+            Entrar <i class="icon ion-arrow-right-c"></i>
+          </button>
+        </div>
+
+      </div>
     </div>
   </ion-content>
 </ion-view>

@@ -199,6 +199,46 @@ body, .pane, .view, .fundo {
 .hero-texto { flex: 1; max-width: 560px; }
 .hero-img { width: 280px; max-width: 38%; margin-left: auto; }
 
+/* ---------- Login em duas colunas ---------- */
+.login-grade { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: stretch; }
+
+.login-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 32px;
+  border-radius: 32px;
+  background: radial-gradient(circle at 70% 75%, rgba(74, 163, 223, 0.55), transparent 60%),
+              linear-gradient(160deg, var(--ucsal-marinho), var(--ucsal-marinho-2));
+  color: var(--ucsal-branco);
+}
+.login-banner .hero-aba { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
+.login-banner .marca,
+.login-banner .titulo-grande { color: var(--ucsal-branco); }
+.login-banner .marca-logo { background: var(--ucsal-branco); color: var(--ucsal-marinho); }
+.login-banner .hero-aba-label { color: var(--ucsal-adesivo); }
+.login-banner .subtitulo { color: rgba(255, 255, 255, 0.8); }
+.login-img { display: block; width: 240px; max-width: 70%; margin: 8px auto 16px; }
+
+.login-recursos { display: flex; flex-wrap: wrap; gap: 8px; }
+.login-recursos span {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  border: 1px solid var(--borda);
+  border-radius: 32px;
+  background: var(--superficie);
+}
+.login-form .titulo-medio { margin: 0 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.8px; }
+
 /* ---------- Formulários (listas do Ionic) ---------- */
 .lista-form {
   margin-bottom: 16px;
@@ -328,6 +368,9 @@ body, .pane, .view, .fundo {
   .pagina { padding: 16px 16px 40px; }
   .hero { padding: 18px 20px 24px; border-radius: 24px; }
   .hero-img { display: none; }
+  .login-grade { grid-template-columns: 1fr; gap: 16px; }
+  .login-banner, .login-form { padding: 20px; border-radius: 24px; }
+  .login-img { width: 140px; }
   .titulo-grande { font-size: 34px; letter-spacing: -1px; }
   .subtitulo { font-size: 16px; }
 }
