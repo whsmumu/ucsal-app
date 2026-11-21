@@ -41,25 +41,15 @@ body, .pane, .view, .fundo {
 .bar.bar-ucsal .title { color: var(--ucsal-marinho); font-weight: 700; }
 .bar.bar-ucsal .button { color: var(--ucsal-marinho); }
 
-/* ---------- Marca ---------- */
-.marca { font-weight: 700; color: var(--ucsal-marinho); letter-spacing: -0.3px; }
-.marca small { font-weight: 400; color: var(--texto-suave); font-size: 0.9em; }
-.marca-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
-  background: var(--ucsal-marinho);
-  color: var(--ucsal-branco);
-  font-weight: 800;
-  font-size: 16px;
-}
+/* ---------- Logo oficial da UCSal ---------- */
+.logo-ucsal { display: block; height: 44px; width: auto; }
 
 /* ---------- Menu lateral ---------- */
-.menu, .menu .bar.bar-ucsal { background: var(--fundo); }
-.menu .title.marca { text-align: left; display: flex; align-items: center; gap: 8px; }
+.menu { background: var(--fundo); }
+/* Logo colorida sobre fundo branco no topo do menu */
+.menu .bar.bar-ucsal { background: var(--ucsal-branco); border-bottom: 1px solid var(--borda); }
+.menu .title.marca { display: flex; align-items: center; margin: 0 16px; }
+.menu .title.marca .logo-ucsal { height: 34px; }
 
 /* Com o menu fixo (tela grande) o botão de abrir menu não é necessário */
 .aside-open .bar [menu-toggle] { display: none; }
@@ -191,7 +181,7 @@ body, .pane, .view, .fundo {
   padding: 8px 16px 8px 8px;
   border: 1px solid var(--borda);
   border-radius: 16px;
-  background: var(--painel);
+  background: var(--ucsal-branco);
 }
 .hero-aba-sep { color: var(--borda); }
 .hero-aba-label { color: var(--ucsal-azul); font-weight: 700; font-size: 13px; letter-spacing: 3px; }
@@ -214,11 +204,10 @@ body, .pane, .view, .fundo {
               linear-gradient(160deg, var(--ucsal-marinho), var(--ucsal-marinho-2));
   color: var(--ucsal-branco);
 }
-.login-banner .hero-aba { align-self: flex-start; background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
-.login-banner .marca,
+/* Aba branca para a logo aparecer nas cores originais sobre o banner escuro */
+.login-banner .hero-aba { align-self: flex-start; padding: 10px 20px 10px 14px; border: 0; }
 .login-banner .titulo-grande { color: var(--ucsal-branco); }
-.login-banner .marca-logo { background: var(--ucsal-branco); color: var(--ucsal-marinho); }
-.login-banner .hero-aba-label { color: var(--ucsal-adesivo); }
+.login-banner .logo-ucsal { height: 56px; }
 .login-banner .subtitulo { color: rgba(255, 255, 255, 0.8); }
 .login-img { display: block; width: 240px; max-width: 70%; margin: 8px auto 16px; }
 
