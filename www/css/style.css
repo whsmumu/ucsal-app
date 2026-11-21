@@ -205,20 +205,11 @@ body, .pane, .view, .fundo {
   color: var(--ucsal-branco);
 }
 /* Aba branca para a logo aparecer nas cores originais sobre o banner escuro */
-.login-banner .hero-aba { align-self: flex-start; padding: 10px 20px 10px 14px; border: 0; }
+.login-banner .hero-aba { align-self: center; padding: 10px 20px 10px 14px; border: 0; }
 .login-banner .titulo-grande { color: var(--ucsal-branco); }
 .login-banner .logo-ucsal { height: 56px; }
 .login-banner .subtitulo { color: rgba(255, 255, 255, 0.8); }
 .login-img { display: block; width: 240px; max-width: 70%; margin: 8px auto 16px; }
-
-.login-recursos { display: flex; flex-wrap: wrap; gap: 8px; }
-.login-recursos span {
-  padding: 7px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  font-size: 14px;
-  font-weight: 500;
-}
 
 .login-form {
   display: flex;
