@@ -110,7 +110,7 @@ body, .pane, .view, .fundo {
 /* ---------- Layout das páginas ---------- */
 .pagina { max-width: 1100px; margin: 0 auto; padding: 24px 20px 48px; }
 .pagina-estreita { max-width: 760px; }
-.pagina-login { padding-top: 6vh; }
+.pagina.pagina-login { max-width: none; padding: 0; }
 
 .cabecalho { margin: 8px 0 24px; }
 
@@ -200,18 +200,21 @@ body, .pane, .view, .fundo {
 .hero-img { width: 280px; max-width: 38%; margin-left: auto; }
 
 /* ---------- Login em duas colunas ---------- */
-.login-grade { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: stretch; }
+/* Tela cheia dividida ao meio: banner à esquerda, formulário à direita */
+.login-grade { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
 
 .login-banner {
   position: relative;
   overflow: hidden;
-  padding: 28px 32px;
-  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 8%;
   background: radial-gradient(circle at 70% 75%, rgba(74, 163, 223, 0.55), transparent 60%),
               linear-gradient(160deg, var(--ucsal-marinho), var(--ucsal-marinho-2));
   color: var(--ucsal-branco);
 }
-.login-banner .hero-aba { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
+.login-banner .hero-aba { align-self: flex-start; background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
 .login-banner .marca,
 .login-banner .titulo-grande { color: var(--ucsal-branco); }
 .login-banner .marca-logo { background: var(--ucsal-branco); color: var(--ucsal-marinho); }
@@ -232,9 +235,7 @@ body, .pane, .view, .fundo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 32px;
-  border: 1px solid var(--borda);
-  border-radius: 32px;
+  padding: 48px 14%;
   background: var(--superficie);
 }
 .login-form .titulo-medio { margin: 0 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.8px; }
@@ -368,8 +369,8 @@ body, .pane, .view, .fundo {
   .pagina { padding: 16px 16px 40px; }
   .hero { padding: 18px 20px 24px; border-radius: 24px; }
   .hero-img { display: none; }
-  .login-grade { grid-template-columns: 1fr; gap: 16px; }
-  .login-banner, .login-form { padding: 20px; border-radius: 24px; }
+  .login-grade { grid-template-columns: 1fr; }
+  .login-banner, .login-form { padding: 28px 20px; }
   .login-img { width: 140px; }
   .titulo-grande { font-size: 34px; letter-spacing: -1px; }
   .subtitulo { font-size: 16px; }
