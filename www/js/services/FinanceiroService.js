@@ -1,4 +1,3 @@
-// Objeto mockado de mensalidades agrupadas por semestre letivo
 angular.module('ucsalApp')
   .service('FinanceiroService', function () {
 

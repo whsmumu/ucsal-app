@@ -1,9 +1,7 @@
-// RF04 - Consulta de mensalidades por semestre
 angular.module('ucsalApp')
   .controller('FinanceiroCtrl', function ($scope, FinanceiroService) {
 
     $scope.semestres = FinanceiroService.listarSemestres();
-    // Objeto para o ng-model do <select> funcionar dentro do ion-content
     $scope.filtro = { semestre: $scope.semestres[$scope.semestres.length - 1] };
     $scope.copiado = null;
 
@@ -16,7 +14,7 @@ angular.module('ucsalApp')
       if (navigator.clipboard) {
         navigator.clipboard.writeText(mensalidade.codigoBarras);
       }
-      $scope.copiado = mensalidade; // mostra a confirmação só nessa parcela
+      $scope.copiado = mensalidade;
     };
 
     $scope.carregarMensalidades();

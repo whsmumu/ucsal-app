@@ -1,4 +1,3 @@
-// Array mockado de notícias institucionais e eventos da UCSal
 angular.module('ucsalApp')
   .service('NoticiasService', function () {
 

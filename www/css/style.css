@@ -1,6 +1,3 @@
-/* =========================================================
-   Identidade visual UCSal (azul marinho, azul claro e branco)
-   ========================================================= */
 :root {
   --ucsal-marinho: #0a2a5c;
   --ucsal-marinho-2: #163f80;
@@ -9,9 +6,9 @@
   --ucsal-adesivo: #8cc8f0;
   --ucsal-branco: #ffffff;
 
-  --fundo: #e8eef6;       /* menu lateral */
-  --painel: #f4f7fb;      /* fundo das telas */
-  --superficie: #ffffff;  /* cards */
+  --fundo: #e8eef6;
+  --painel: #f4f7fb;
+  --superficie: #ffffff;
   --borda: #d8e2ee;
   --texto: #0d1b30;
   --texto-suave: #5a6a80;
@@ -32,7 +29,6 @@ body, .pane, .view, .fundo {
   color: var(--texto);
 }
 
-/* ---------- Barra superior ---------- */
 .bar.bar-ucsal {
   background: var(--painel);
   background-image: none;
@@ -41,17 +37,13 @@ body, .pane, .view, .fundo {
 .bar.bar-ucsal .title { color: var(--ucsal-marinho); font-weight: 700; }
 .bar.bar-ucsal .button { color: var(--ucsal-marinho); }
 
-/* ---------- Logo oficial da UCSal ---------- */
 .logo-ucsal { display: block; height: 44px; width: auto; }
 
-/* ---------- Menu lateral ---------- */
 .menu { background: var(--fundo); }
-/* Logo colorida sobre fundo branco no topo do menu */
 .menu .bar.bar-ucsal { background: var(--ucsal-branco); border-bottom: 1px solid var(--borda); }
 .menu .title.marca { display: flex; align-items: center; margin: 0 16px; }
 .menu .title.marca .logo-ucsal { height: 34px; }
 
-/* Com o menu fixo (tela grande) o botão de abrir menu não é necessário */
 .aside-open .bar [menu-toggle] { display: none; }
 
 .menu-lista { margin: 12px; }
@@ -97,7 +89,6 @@ body, .pane, .view, .fundo {
 }
 .botao-sair { margin: 0 16px; width: calc(100% - 32px); }
 
-/* ---------- Layout das páginas ---------- */
 .pagina { max-width: 1100px; margin: 0 auto; padding: 24px 20px 48px; }
 .pagina-estreita { max-width: 760px; }
 .pagina.pagina-login { max-width: none; padding: 0; }
@@ -122,7 +113,6 @@ body, .pane, .view, .fundo {
   color: var(--texto-suave);
 }
 
-/* "Adesivo" inclinado ao lado dos títulos */
 .adesivo {
   position: relative;
   display: inline-flex;
@@ -150,7 +140,6 @@ body, .pane, .view, .fundo {
   background: var(--superficie);
 }
 
-/* ---------- Bloco de destaque (hero) ---------- */
 .hero {
   position: relative;
   overflow: hidden;
@@ -189,8 +178,6 @@ body, .pane, .view, .fundo {
 .hero-texto { flex: 1; max-width: 560px; }
 .hero-img { width: 280px; max-width: 38%; margin-left: auto; }
 
-/* ---------- Login em duas colunas ---------- */
-/* Tela cheia dividida ao meio: banner à esquerda, formulário à direita */
 .login-grade { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
 
 .login-banner {
@@ -204,7 +191,6 @@ body, .pane, .view, .fundo {
               linear-gradient(160deg, var(--ucsal-marinho), var(--ucsal-marinho-2));
   color: var(--ucsal-branco);
 }
-/* Aba branca para a logo aparecer nas cores originais sobre o banner escuro */
 .login-banner .hero-aba { align-self: center; padding: 10px 20px 10px 14px; border: 0; }
 .login-banner .titulo-grande { color: var(--ucsal-branco); }
 .login-banner .logo-ucsal { height: 56px; }
@@ -220,7 +206,6 @@ body, .pane, .view, .fundo {
 }
 .login-form .titulo-medio { margin: 0 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.8px; }
 
-/* ---------- Formulários (listas do Ionic) ---------- */
 .lista-form {
   margin-bottom: 16px;
   overflow: hidden;
@@ -238,7 +223,6 @@ body, .pane, .view, .fundo {
   padding-left: 10px;
 }
 
-/* ---------- Botões ---------- */
 .button.botao-primario,
 .button.botao-secundario {
   border: 0;
@@ -253,12 +237,10 @@ body, .pane, .view, .fundo {
 .button.botao-grande { min-height: 52px; font-size: 17px; padding: 0 28px; }
 .button .icon:before { font-size: 18px; vertical-align: -2px; }
 
-/* ---------- Mensagens de erro / sucesso ---------- */
 .mensagem { margin-bottom: 16px; padding: 12px 14px; border-radius: 14px; font-weight: 500; }
 .mensagem-erro { background: var(--vermelho-claro); color: var(--vermelho); }
 .mensagem-sucesso { background: var(--verde-claro); color: var(--verde); }
 
-/* ---------- Chips de filtro ---------- */
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
 .chip {
   padding: 9px 18px;
@@ -272,7 +254,6 @@ body, .pane, .view, .fundo {
 .chip span { margin-left: 6px; color: var(--texto-suave); }
 .chip.ativo { background: var(--superficie); border-color: var(--borda); font-weight: 600; }
 
-/* ---------- Cards ---------- */
 .grade-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
 
 .card {
@@ -307,7 +288,6 @@ body, .pane, .view, .fundo {
 }
 .card .conteudo { font-size: 17px; line-height: 1.7; color: var(--texto); }
 
-/* ---------- Mensalidades ---------- */
 .lista-mensalidades { display: flex; flex-direction: column; gap: 12px; }
 .mensalidade {
   padding: 16px 20px;
@@ -338,13 +318,11 @@ body, .pane, .view, .fundo {
 }
 .boleto .mensagem { margin: 10px 0 0; }
 
-/* ---------- Popup do Ionic ---------- */
 .popup-container .popup { border-radius: 24px; overflow: hidden; }
 .popup-head { border-bottom: 0; }
 .popup-title { font-weight: 700; color: var(--ucsal-marinho); }
 .popup-buttons .button { border-radius: 999px; }
 
-/* ---------- Celular ---------- */
 @media (max-width: 640px) {
   .pagina { padding: 16px 16px 40px; }
   .hero { padding: 18px 20px 24px; border-radius: 24px; }

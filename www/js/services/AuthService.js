@@ -1,4 +1,3 @@
-// Mock de credenciais e sessão do aluno logado (em memória)
 angular.module('ucsalApp')
   .service('AuthService', function ($rootScope, AlunoService) {
 
@@ -9,7 +8,6 @@ angular.module('ucsalApp')
 
     var alunoLogado = null;
 
-    // Retorna o aluno se matrícula e senha conferem, senão null
     this.login = function (matricula, senha) {
       var valida = credenciais.some(function (c) {
         return c.matricula === matricula && c.senha === senha;

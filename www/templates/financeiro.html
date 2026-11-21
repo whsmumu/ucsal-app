@@ -7,7 +7,6 @@
         <p class="subtitulo">Escolha o semestre letivo para ver suas parcelas.</p>
       </div>
 
-      <!-- Seletor de semestre -->
       <div class="list lista-form">
         <label class="item item-input item-select">
           <div class="input-label">Semestre letivo</div>
@@ -17,7 +16,6 @@
         </label>
       </div>
 
-      <!-- Lista de mensalidades do semestre escolhido -->
       <div class="lista-mensalidades">
         <div class="mensalidade" ng-repeat="mensalidade in mensalidades">
           <div class="mensalidade-topo">
@@ -34,7 +32,6 @@
             </div>
           </div>
 
-          <!-- Só aparece para parcelas em aberto -->
           <div class="boleto" ng-if="mensalidade.status === 'A Pagar'">
             <code>{{mensalidade.codigoBarras}}</code>
             <button class="button botao-secundario" ng-click="copiarCodigo(mensalidade)">

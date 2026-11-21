@@ -1,7 +1,5 @@
-// Módulo principal da aplicação
 angular.module('ucsalApp', ['ionic'])
 
-  // Rotas da SPA com ui-router: cada template ligado ao seu controller
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('login', {
@@ -10,7 +8,6 @@ angular.module('ucsalApp', ['ionic'])
         controller: 'LoginCtrl'
       })
 
-      // Estado "pai" com o menu lateral; as telas internas abrem dentro dele
       .state('app', {
         url: '/app',
         abstract: true,
@@ -45,7 +42,6 @@ angular.module('ucsalApp', ['ionic'])
   })
 
   .run(function ($rootScope, $state, $ionicHistory, AuthService) {
-    // Sem aluno logado, qualquer tela volta para o login
     $rootScope.$on('$stateChangeStart', function (event, toState) {
       if (toState.name !== 'login' && !AuthService.getAlunoLogado()) {
         event.preventDefault();
@@ -53,7 +49,6 @@ angular.module('ucsalApp', ['ionic'])
       }
     });
 
-    // Botão "Sair" do menu lateral
     $rootScope.sair = function () {
       AuthService.logout();
       $state.go('login').then(function () {

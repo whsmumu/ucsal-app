@@ -1,8 +1,6 @@
-// RF01 - Autenticação com login mockado
 angular.module('ucsalApp')
   .controller('LoginCtrl', function ($scope, $state, $ionicHistory, AuthService) {
 
-    // Objeto (e não variável solta) para o ng-model funcionar dentro do ion-content
     $scope.form = { matricula: '', senha: '' };
     $scope.erro = '';
 
@@ -20,7 +18,6 @@ angular.module('ucsalApp')
 
       $scope.erro = '';
       $scope.form = { matricula: '', senha: '' };
-      // Mural vira a tela inicial (sem botão de voltar para o login)
       $ionicHistory.nextViewOptions({ disableBack: true, historyRoot: true });
       $state.go('app.noticias');
     };

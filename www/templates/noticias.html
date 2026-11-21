@@ -2,7 +2,6 @@
   <ion-content class="fundo">
     <div class="pagina">
 
-      <!-- Destaque de boas-vindas -->
       <div class="hero">
         <div class="hero-aba">
           <img class="logo-ucsal" src="img/logo-ucsal.svg" alt="UCSal">
@@ -21,7 +20,6 @@
         </div>
       </div>
 
-      <!-- Filtro por categoria -->
       <div class="chips">
         <button class="chip" ng-class="{ativo: categoria === ''}" ng-click="filtrar('')">
           todos <span>{{noticias.length}}</span>
@@ -34,7 +32,6 @@
         </button>
       </div>
 
-      <!-- Cards gerados pelo ng-repeat + filtro por categoria -->
       <div class="grade-cards">
         <div class="card card-noticia" ng-repeat="noticia in noticias | filter:{categoria: categoria}">
           <div class="item item-image">

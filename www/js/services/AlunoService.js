@@ -1,4 +1,3 @@
-// Dados cadastrais mockados dos alunos e métodos de busca/edição
 angular.module('ucsalApp')
   .service('AlunoService', function () {
 
@@ -27,7 +26,6 @@ angular.module('ucsalApp')
       });
     };
 
-    // Atualiza somente os campos editáveis (contato e endereço)
     this.atualizar = function (dados) {
       var aluno = this.buscarPorMatricula(dados.matricula);
       aluno.email = dados.email;
